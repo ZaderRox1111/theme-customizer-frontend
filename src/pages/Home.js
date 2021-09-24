@@ -1,6 +1,22 @@
+import '../css/Home.css';
+
 function Home() {
     return (
-        <h1>Home Page</h1>
+        <body class="imgback">
+            <table class="mainbox">
+                <tc>
+                    <td class="welcomebox">
+                        <h1>Theme Customizer</h1>
+                    </td>
+
+                    <td class="mainoptions">
+                        <div>
+                            
+                        </div>
+                    </td>
+                </tc>
+            </table>
+        </body>
     )
 }
 

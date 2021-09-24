@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    background-color: #c2cbcecc;
+    border-radius: 10px;
+    color: #2c3842;
+    width: 400px;
+    padding: 10px;
+    position: relative;
+    left: 50px;
+    text-align: center;
+}
+
+.welcomebox {
+    vertical-align: middle;
+}
+
+.main
+
+.imgback {
+    background-image: url("../images/BackgroundTheme.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
