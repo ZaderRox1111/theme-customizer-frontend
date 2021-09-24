@@ -1,20 +1,28 @@
 import '../css/Home.css';
+import React, {Component} from 'react';
+import { Container, Navbar } from 'react-bootstrap';
 
 function Home() {
     return (
         <body class="imgback">
+            
+            <div class="navbar">
+                <h3>Theme Customizer</h3>
+            </div>
+
             <table class="mainbox">
-                <tc>
+
+                <tr>
                     <td class="welcomebox">
                         <h1>Theme Customizer</h1>
                     </td>
 
                     <td class="mainoptions">
                         <div>
-                            
+                            <h2>Select a platform</h2>
                         </div>
                     </td>
-                </tc>
+                </tr>
             </table>
         </body>
     )

@@ -1,28 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
+body {
+    background-color: #1C252E;
+}
+
 h1 {
-    background-color: #c2cbcecc;
-    border-radius: 10px;
-    color: #2c3842;
-    width: 400px;
-    padding: 10px;
     position: relative;
-    left: 50px;
+    font-size: 6vw;
+    font-family: 'Oswald', sans-serif;
+    color: #2c3842;
+    background-color: #D6D6D6ee;
+    border-radius: 10px;
+    box-shadow: #586e8088 0px 0px 5vw 1vw;
+    width: 35vw;
+    left: 15vw;
     text-align: center;
+}
+
+h2 {
+    margin: auto;
+    position: relative;
+    font-size: 4vw;
+    top: -25vh;
+    width: 90%;
+    text-decoration: underline;
+}
+
+h3 {
+    padding-left: 5%;
+}
+
+.navbar {
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    background-color: #181f25;
+    box-shadow: #181f25 0 0 10px 1px;
+    color: #D6D6D6;
+    font-family: 'Oswald', sans-serif;
 }
 
 .welcomebox {
     vertical-align: middle;
+    width: 70%;
 }
 
-.main
+.mainoptions {
+    position: relative;
+    z-index: 1;
+    background-color: #D6D6D6ee;
+    box-shadow: #586e8088 0px 0px 5vw 3vw;
+    width: 30%;
+    font-family: 'Oswald', sans-serif;
+    color: #2c3842;
+    text-align: center;
+}
+
+.mainbox {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
 
 .imgback {
     background-image: url("../images/BackgroundTheme.png");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     position: fixed;
     height: 100%;
     width: 100%;
