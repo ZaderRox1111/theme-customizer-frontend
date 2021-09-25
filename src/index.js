@@ -9,9 +9,6 @@ ReactDOM.render(
   (<BrowserRouter>
     <App /> {/* The various pages will be displayed by the `Main` component. */}
   </BrowserRouter>),
-  //<React.StrictMode>
-  //  <App />
-  //</React.StrictMode>,
   document.getElementById('root')
 );
 
