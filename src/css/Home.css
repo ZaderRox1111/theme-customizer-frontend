@@ -15,7 +15,7 @@ footer {
     width: 100%;
     height: 50px;
     background-color: #181f25;
-    box-shadow: #181f25 0 0 10px 1px;
+    box-shadow: #000000 0 0 10px 1px;
     color: #D6D6D6;
     font-family: 'Oswald', sans-serif;
 }
@@ -79,7 +79,7 @@ Button:hover {
     width: 100%;
     height: 50px;
     background-color: #181f25;
-    box-shadow: #181f25 0 0 10px 1px;
+    box-shadow: #000000 0 0 10px 1px;
     color: #D6D6D6;
     font-family: 'Oswald', sans-serif;
 }
