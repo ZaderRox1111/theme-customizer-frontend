@@ -1,6 +1,20 @@
 import '../css/VSCodeBox.css';
+import { makeStyles } from '@material-ui/core';
+import React from 'react';
+
+const useStyles = makeStyles(theme => ({
+    maintext: {
+        backgroundColor: '#1e3042',
+        position: 'relative',
+        width: '100%',
+        height: '96%',
+        lineHeight: '18px',
+    }
+}));
 
 function VSCodeBox() {
+    const { maintext } = useStyles();
+
     return (
         <div class="examplebox">
             
@@ -15,7 +29,7 @@ function VSCodeBox() {
                     <h5>Top Bar</h5>
                 </div>
 
-                <div class="maintext">
+                <div className={maintext}>
                     <text>
                         <tspan>&nbsp;</tspan>
                         <tspan>1</tspan>
