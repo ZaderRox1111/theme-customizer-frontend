@@ -68,6 +68,19 @@ function VSCodeBox() {
                         <tspan>&nbsp;</tspan>
                         <tspan>5</tspan>
                         <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                        <tspan>var</tspan>
+                        <tspan>&nbsp;</tspan>
+                        <tspan>listening</tspan>
+                        <tspan>&nbsp;</tspan>
+                        <tspan>=</tspan>
+                        <tspan>&nbsp;</tspan>
+                        <tspan>(</tspan>
+                        <tspan>portNum</tspan>
+                        <tspan>)</tspan>
+                        <tspan>&nbsp;</tspan>
+                        <tspan>={'>'}</tspan>
+                        <tspan>&nbsp;</tspan>
+                        <tspan>{'{'}</tspan>
                     </text><br />
                     <text>
                         <tspan>&nbsp;</tspan>
