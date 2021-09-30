@@ -61,15 +61,6 @@ body {
     width: 100%;
 }
 
-.colors {
-    width: 9500px;
-}
-
-.themebox {
-    position: relative;
-    right: 0px;
-}
-
 /* scrollbar */
 /* width */
 ::-webkit-scrollbar {

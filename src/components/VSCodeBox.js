@@ -1,6 +1,7 @@
 import '../css/VSCodeBox.css';
 import { makeStyles } from '@material-ui/core';
-import React from 'react';
+import React, { useState } from 'react';
+import { Button } from 'react-bootstrap';
 
 const useStyles = makeStyles(theme => ({
     maintext: {
@@ -14,513 +15,547 @@ const useStyles = makeStyles(theme => ({
 
 function VSCodeBox() {
     const { maintext } = useStyles();
+    const [c1, setC1] = useState('#1c252e');
+    const [c2, setC2] = useState('#44929e');
+    const [c3, setC3] = useState('#c15f6f');
+    const [c4, setC4] = useState('#64b2be');
+    const [c5, setC5] = useState('#ffffff');
+    const [c6, setC6] = useState('#a7a8af');
+    const [c7, setC7] = useState('#54ac86');
+    const [c8, setC8] = useState('#24727e');
+    const [c9, setC9] = useState('#ffffff');
+    const [c10, setC10] = useState('#ffffff');
+    const [c11, setC11] = useState('#ffffff');
+    const [c12, setC12] = useState('#84b5ca');
+
+    const increase = () => {
+        setC6('green');
+    }
 
     return (
-        <div class="examplebox">
+        <table>
+            <tr>
+                <td class="colors">
+                    
+                    <Button
+                        onClick={increase}
+                    >
+                        Balls
+                    </Button>
+
+                </td>
+
+                <td class="themebox">
+                    <div class="examplebox">
+
+                    <h6>Applied Theme</h6>
+
+                    <div class="viewbox">
+                        <div class="sidebar">
+
+                        </div>
+
+                        <div class="topbar">    
+                            <h5>Top Bar</h5>
+                        </div>
+
+                        <div className={maintext} style={{backgroundColor:c1}}>
+                            <text>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c8}}>1</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan style={{color:c2}}>const</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c3}}>express</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c6}}>=</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c7}}>require</tspan>
+                                <tspan style={{color:c6}}>(</tspan>
+                                <tspan style={{color:c12}}>'express'</tspan>
+                                <tspan style={{color:c6}}>)</tspan>
+                                <tspan style={{color:c6}}>;</tspan>
+                            </text><br/>
+                            <text>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c8}}>2</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan style={{color:c2}}>let</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c4}}>app</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c6}}>=</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan>express</tspan>
+                                <tspan>()</tspan>
+                                <tspan style={{color:c6}}>;</tspan>
+                            </text><br />
+                            <text>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c8}}>3</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan style={{color:c2}}>const</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan>port</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c6}}>=</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan>8080</tspan>
+                                <tspan style={{color:c6}}>;</tspan>
+                            </text><br />
+                            <text>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c8}}>4</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                            </text><br />
+                            <text>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c8}}>5</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan style={{color:c2}}>const</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan>listening</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c6}}>=</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan>(</tspan>
+                                <tspan>portNum</tspan>
+                                <tspan>)</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c6}}>={'>'}</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c6}}>{'{'}</tspan>
+                            </text><br />
+                            <text>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c8}}>6</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>console</tspan>
+                                <tspan style={{color:c6}}>.</tspan>
+                                <tspan>log</tspan>
+                                <tspan>(</tspan>
+                                <tspan style={{color:c6}}>`</tspan>
+                                <tspan>Currently listening on port: </tspan>
+                                <tspan style={{color:c6}}>{'${'}</tspan>
+                                <tspan>portNum</tspan>
+                                <tspan style={{color:c6}}>{'}'} </tspan>
+                                <tspan>Access it here: <u>http://localhost:</u></tspan>
+                                <tspan style={{color:c6}}><u>{'${'}</u></tspan>
+                                <tspan><u>portNum</u></tspan>
+                                <tspan style={{color:c6}}><u>{'}'}</u></tspan>
+                                <tspan style={{color:c6}}>`</tspan>
+                                <tspan>)</tspan>
+                                <tspan style={{color:c6}}>;</tspan>
+                            </text><br />
+                            <text>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c8}}>7</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                            </text><br />
+                            <text>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c8}}>8</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan style={{color:c2}}>let</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c4}}>index</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c6}}>=</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan>0</tspan>
+                                <tspan style={{color:c6}}>;</tspan>
+                            </text><br />
+                            <text>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c8}}>9</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan style={{color:c2}}>let</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c4}}>answerArr</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c6}}>=</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan>[]</tspan>
+                                <tspan style={{color:c6}}>;</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>10</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan style={{color:c2}}>const</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan>localObject</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c6}}>=</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c6}}>{'{'}</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>11</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>first</tspan>
+                                <tspan style={{color:c6}}>: </tspan>
+                                <tspan style={{color:c6}}>{'{'}</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>12</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>number</tspan>
+                                <tspan style={{color:c6}}>: </tspan>
+                                <tspan>17</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>13</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan style={{color:c6}}>{'}'}</tspan>
+                                <tspan style={{color:c6}}>,</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>14</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>second</tspan>
+                                <tspan style={{color:c6}}>: </tspan>
+                                <tspan style={{color:c6}}>{'{'}</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>15</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>number</tspan>
+                                <tspan style={{color:c6}}>: </tspan>
+                                <tspan>-</tspan>
+                                <tspan>35.8</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>16</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan style={{color:c6}}>{'}'}</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>17</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan style={{color:c6}}>{'}'}</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>18</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>19</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>Object</tspan>
+                                <tspan style={{color:c6}}>.</tspan>
+                                <tspan>values</tspan>
+                                <tspan>(</tspan>
+                                <tspan style={{color:c4}}>localObject</tspan>
+                                <tspan>)</tspan>
+                                <tspan style={{color:c6}}>.</tspan>
+                                <tspan>forEach</tspan>
+                                <tspan>(</tspan>
+                                <tspan>value </tspan>
+                                <tspan>{'=>'} </tspan>
+                                <tspan style={{color:c6}}>{'{'}</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>20</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan style={{color:c4}}>answerArr</tspan>
+                                <tspan>[</tspan>
+                                <tspan style={{color:c4}}>index</tspan>
+                                <tspan>] </tspan>
+                                <tspan style={{color:c6}}>= </tspan>
+                                <tspan>(</tspan>
+                                <tspan style={{color:c4}}>value</tspan>
+                                <tspan>.</tspan>
+                                <tspan style={{color:c4}}>number </tspan>
+                                <tspan>+ </tspan>
+                                <tspan>1.0</tspan>
+                                <tspan>) </tspan>
+                                <tspan>/ </tspan>
+                                <tspan>(</tspan>
+                                <tspan>Math</tspan>
+                                <tspan style={{color:c6}}>.</tspan>
+                                <tspan>random</tspan>
+                                <tspan>() </tspan>
+                                <tspan>* </tspan>
+                                <tspan style={{color:c4}}>value</tspan>
+                                <tspan style={{color:c6}}>.</tspan>
+                                <tspan style={{color:c4}}>number</tspan>
+                                <tspan>)</tspan>
+                                <tspan style={{color:c6}}>;</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>21</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan style={{color:c4}}>index</tspan>
+                                <tspan>++</tspan>
+                                <tspan style={{color:c6}}>;</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>22</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan style={{color:c6}}>{'}'}</tspan>
+                                <tspan>)</tspan>
+                                <tspan style={{color:c6}}>;</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>23</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>24</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>bubbleSort</tspan>
+                                <tspan>(</tspan>
+                                <tspan style={{color:c4}}>answerArr</tspan>
+                                <tspan style={{color:c6}}>, </tspan>
+                                <tspan>2</tspan>
+                                <tspan>)</tspan>
+                                <tspan style={{color:c6}}>;</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>25</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan style={{color:c6}}>{'}'}</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>26</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>27</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan style={{color:c2}}>const</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan>swap</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c6}}>=</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan>(</tspan>
+                                <tspan>arr</tspan>
+                                <tspan style={{color:c6}}>, </tspan>
+                                <tspan>firstIndex</tspan>
+                                <tspan style={{color:c6}}>, </tspan>
+                                <tspan>secondIndex</tspan>
+                                <tspan>)</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan>={'>'}</tspan>
+                                <tspan>&nbsp;</tspan>
+                                <tspan style={{color:c6}}>{'{'}</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>28</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan style={{color:c2}}>var </tspan>
+                                <tspan style={{color:c4}}>temp </tspan>
+                                <tspan style={{color:c6}}>= </tspan>
+                                <tspan style={{color:c4}}>arr</tspan>
+                                <tspan>[</tspan>
+                                <tspan style={{color:c4}}>firstIndex</tspan>
+                                <tspan>]</tspan>
+                                <tspan style={{color:c6}}>;</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>29</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan style={{color:c4}}>arr</tspan>
+                                <tspan>[</tspan>
+                                <tspan style={{color:c4}}>firstIndex</tspan>
+                                <tspan>] </tspan>
+                                <tspan style={{color:c6}}>= </tspan>
+                                <tspan style={{color:c4}}>arr</tspan>
+                                <tspan>[</tspan>
+                                <tspan style={{color:c4}}>secondIndex</tspan>
+                                <tspan>]</tspan>
+                                <tspan style={{color:c6}}>;</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>30</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan style={{color:c4}}>arr</tspan>
+                                <tspan>[</tspan>
+                                <tspan style={{color:c4}}>secondIndex</tspan>
+                                <tspan>] </tspan>
+                                <tspan style={{color:c6}}>= </tspan>
+                                <tspan style={{color:c4}}>temp</tspan>
+                                <tspan style={{color:c6}}>;</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>31</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan style={{color:c6}}>{'}'}</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>32</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>33</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan style={{color:c2}}>const </tspan>
+                                <tspan>bubbleSort </tspan>
+                                <tspan style={{color:c6}}>= </tspan>
+                                <tspan>(</tspan>
+                                <tspan>arr</tspan>
+                                <tspan style={{color:c6}}>, </tspan>
+                                <tspan>size</tspan>
+                                <tspan>) </tspan>
+                                <tspan>={'>'} </tspan>
+                                <tspan style={{color:c6}}>{'{'}</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>34</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>for </tspan>
+                                <tspan>(</tspan>
+                                <tspan style={{color:c2}}>var </tspan>
+                                <tspan style={{color:c4}}>outIndex </tspan>
+                                <tspan style={{color:c6}}>= </tspan>
+                                <tspan>0</tspan>
+                                <tspan style={{color:c6}}>; </tspan>
+                                <tspan style={{color:c4}}>outIndex </tspan>
+                                <tspan>{'<'} </tspan>
+                                <tspan style={{color:c4}}>size </tspan>
+                                <tspan>- </tspan>
+                                <tspan>1</tspan>
+                                <tspan style={{color:c6}}>; </tspan>
+                                <tspan style={{color:c4}}>outIndex</tspan>
+                                <tspan>++</tspan>
+                                <tspan>) </tspan>
+                                <tspan style={{color:c6}}>{'{'}</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>35</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>for </tspan>
+                                <tspan>(</tspan>
+                                <tspan style={{color:c2}}>var </tspan>
+                                <tspan style={{color:c4}}>inIndex </tspan>
+                                <tspan style={{color:c6}}>= </tspan>
+                                <tspan>0</tspan>
+                                <tspan style={{color:c6}}>; </tspan>
+                                <tspan style={{color:c4}}>inIndex </tspan>
+                                <tspan>{'<'} </tspan>
+                                <tspan style={{color:c4}}>size </tspan>
+                                <tspan>- </tspan>
+                                <tspan style={{color:c4}}>outIndex </tspan>
+                                <tspan>- </tspan>
+                                <tspan>1</tspan>
+                                <tspan style={{color:c6}}>; </tspan>
+                                <tspan style={{color:c4}}>inIndex</tspan>
+                                <tspan>++</tspan>
+                                <tspan>) </tspan>
+                                <tspan style={{color:c6}}>{'{'}</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>36</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>if </tspan>
+                                <tspan>(</tspan>
+                                <tspan style={{color:c4}}>arr</tspan>
+                                <tspan>[</tspan>
+                                <tspan style={{color:c4}}>inIndex</tspan>
+                                <tspan>] </tspan>
+                                <tspan>{'>'} </tspan>
+                                <tspan style={{color:c4}}>arr</tspan>
+                                <tspan>[</tspan>
+                                <tspan style={{color:c4}}>inIndex</tspan>
+                                <tspan>+ </tspan>
+                                <tspan>1</tspan>
+                                <tspan>] </tspan>
+                                <tspan>) </tspan>
+                                <tspan>swap</tspan>
+                                <tspan>(</tspan>
+                                <tspan style={{color:c4}}>arr</tspan>
+                                <tspan style={{color:c6}}>, </tspan>
+                                <tspan style={{color:c4}}>inIndex</tspan>
+                                <tspan style={{color:c6}}>, </tspan>
+                                <tspan style={{color:c4}}>inIndex </tspan>
+                                <tspan>+ </tspan>
+                                <tspan>1</tspan>
+                                <tspan>)</tspan>
+                                <tspan style={{color:c6}}>;</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>37</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan style={{color:c6}}>{'}'}</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>38</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan style={{color:c6}}>{'}'}</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>39</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan style={{color:c6}}>{'}'}</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>40</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                            </text><br />
+                            <text>
+                                <tspan style={{color:c8}}>41</tspan>
+                                <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                <tspan style={{color:c4}}>app</tspan>
+                                <tspan style={{color:c6}}>.</tspan>
+                                <tspan>listen</tspan>
+                                <tspan>(</tspan>
+                                <tspan style={{color:c4}}>port</tspan>
+                                <tspan style={{color:c6}}>, </tspan>
+                                <tspan>listening</tspan>
+                                <tspan>(</tspan>
+                                <tspan style={{color:c4}}>port</tspan>
+                                <tspan>)</tspan>
+                                <tspan>)</tspan>
+                                <tspan style={{color:c6}}>;</tspan>
+                            </text><br />
+                        </div>
+                    </div>
+
+                    <h6 class="bottombar">Pick Colors on the Side</h6>
+                    </div>
+                </td>
+            </tr>
             
-            <h6>Applied Theme</h6>
-            
-            <div class="viewbox">
-                <div class="sidebar">
-
-                </div>
-
-                <div class="topbar">
-                    <h5>Top Bar</h5>
-                </div>
-
-                <div className={maintext}>
-                    <text>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>1</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>const</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>express</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>=</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>require</tspan>
-                        <tspan>(</tspan>
-                        <tspan>'express'</tspan>
-                        <tspan>)</tspan>
-                        <tspan>;</tspan>
-                    </text><br/>
-                    <text>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>2</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>let</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>app</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>=</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>express</tspan>
-                        <tspan>()</tspan>
-                        <tspan>;</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>3</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>const</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>port</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>=</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>8080</tspan>
-                        <tspan>;</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>4</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>5</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>const</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>listening</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>=</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>(</tspan>
-                        <tspan>portNum</tspan>
-                        <tspan>)</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>={'>'}</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>{'{'}</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>6</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>console</tspan>
-                        <tspan>.</tspan>
-                        <tspan>log</tspan>
-                        <tspan>(</tspan>
-                        <tspan>`</tspan>
-                        <tspan>Currently listening on port: </tspan>
-                        <tspan>{'${'}</tspan>
-                        <tspan>portNum</tspan>
-                        <tspan>{'}'} </tspan>
-                        <tspan>Access it here: <u>http://localhost:</u></tspan>
-                        <tspan><u>{'${'}</u></tspan>
-                        <tspan><u>portNum</u></tspan>
-                        <tspan><u>{'}'}</u></tspan>
-                        <tspan>`</tspan>
-                        <tspan>)</tspan>
-                        <tspan>;</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>7</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>8</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>let</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>index</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>=</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>0</tspan>
-                        <tspan>;</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>9</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>let</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>answerArr</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>=</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>[]</tspan>
-                        <tspan>;</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>10</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>const</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>localObject</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>=</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>{'{'}</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>11</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>first</tspan>
-                        <tspan>: </tspan>
-                        <tspan>{'{'}</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>12</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>number</tspan>
-                        <tspan>: </tspan>
-                        <tspan>17</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>13</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>{'}'}</tspan>
-                        <tspan>,</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>14</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>second</tspan>
-                        <tspan>: </tspan>
-                        <tspan>{'{'}</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>15</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>number</tspan>
-                        <tspan>: </tspan>
-                        <tspan>-</tspan>
-                        <tspan>35.8</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>16</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>{'}'}</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>17</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>{'}'}</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>18</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>19</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>Object</tspan>
-                        <tspan>.</tspan>
-                        <tspan>values</tspan>
-                        <tspan>(</tspan>
-                        <tspan>localObject</tspan>
-                        <tspan>)</tspan>
-                        <tspan>.</tspan>
-                        <tspan>forEach</tspan>
-                        <tspan>(</tspan>
-                        <tspan>value </tspan>
-                        <tspan>{'=>'} </tspan>
-                        <tspan>{'{'}</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>20</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>answerArr</tspan>
-                        <tspan>[</tspan>
-                        <tspan>index</tspan>
-                        <tspan>] </tspan>
-                        <tspan>= </tspan>
-                        <tspan>(</tspan>
-                        <tspan>value</tspan>
-                        <tspan>.</tspan>
-                        <tspan>number </tspan>
-                        <tspan>+ </tspan>
-                        <tspan>1.0</tspan>
-                        <tspan>) </tspan>
-                        <tspan>/ </tspan>
-                        <tspan>(</tspan>
-                        <tspan>Math</tspan>
-                        <tspan>.</tspan>
-                        <tspan>random</tspan>
-                        <tspan>() </tspan>
-                        <tspan>* </tspan>
-                        <tspan>value</tspan>
-                        <tspan>.</tspan>
-                        <tspan>number</tspan>
-                        <tspan>)</tspan>
-                        <tspan>;</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>21</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>index</tspan>
-                        <tspan>++</tspan>
-                        <tspan>;</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>22</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>{'}'}</tspan>
-                        <tspan>)</tspan>
-                        <tspan>;</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>23</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>24</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>bubbleSort</tspan>
-                        <tspan>(</tspan>
-                        <tspan>answerArr</tspan>
-                        <tspan>, </tspan>
-                        <tspan>2</tspan>
-                        <tspan>)</tspan>
-                        <tspan>;</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>25</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>{'}'}</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>26</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>27</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>const</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>swap</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>=</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>(</tspan>
-                        <tspan>arr</tspan>
-                        <tspan>, </tspan>
-                        <tspan>firstIndex</tspan>
-                        <tspan>, </tspan>
-                        <tspan>secondIndex</tspan>
-                        <tspan>)</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>={'>'}</tspan>
-                        <tspan>&nbsp;</tspan>
-                        <tspan>{'{'}</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>28</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>var </tspan>
-                        <tspan>temp </tspan>
-                        <tspan>= </tspan>
-                        <tspan>arr</tspan>
-                        <tspan>[</tspan>
-                        <tspan>firstIndex</tspan>
-                        <tspan>]</tspan>
-                        <tspan>;</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>29</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>arr</tspan>
-                        <tspan>[</tspan>
-                        <tspan>firstIndex</tspan>
-                        <tspan>] </tspan>
-                        <tspan>= </tspan>
-                        <tspan>arr</tspan>
-                        <tspan>[</tspan>
-                        <tspan>secondIndex</tspan>
-                        <tspan>]</tspan>
-                        <tspan>;</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>30</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>arr</tspan>
-                        <tspan>[</tspan>
-                        <tspan>secondIndex</tspan>
-                        <tspan>] </tspan>
-                        <tspan>= </tspan>
-                        <tspan>temp</tspan>
-                        <tspan>;</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>31</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>{'}'}</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>32</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>33</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>const </tspan>
-                        <tspan>bubbleSort </tspan>
-                        <tspan>= </tspan>
-                        <tspan>(</tspan>
-                        <tspan>arr</tspan>
-                        <tspan>, </tspan>
-                        <tspan>size</tspan>
-                        <tspan>) </tspan>
-                        <tspan>={'>'} </tspan>
-                        <tspan>{'{'}</tspan>
-
-                    </text><br />
-                    <text>
-                        <tspan>34</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>for </tspan>
-                        <tspan>(</tspan>
-                        <tspan>var </tspan>
-                        <tspan>outIndex </tspan>
-                        <tspan>= </tspan>
-                        <tspan>0</tspan>
-                        <tspan>; </tspan>
-                        <tspan>outIndex </tspan>
-                        <tspan>{'<'} </tspan>
-                        <tspan>size </tspan>
-                        <tspan>- </tspan>
-                        <tspan>1</tspan>
-                        <tspan>; </tspan>
-                        <tspan>outIndex</tspan>
-                        <tspan>++</tspan>
-                        <tspan>) </tspan>
-                        <tspan>{'{'}</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>35</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>for </tspan>
-                        <tspan>(</tspan>
-                        <tspan>var </tspan>
-                        <tspan>inIndex </tspan>
-                        <tspan>= </tspan>
-                        <tspan>0</tspan>
-                        <tspan>; </tspan>
-                        <tspan>inIndex </tspan>
-                        <tspan>{'<'} </tspan>
-                        <tspan>size </tspan>
-                        <tspan>- </tspan>
-                        <tspan>outIndex </tspan>
-                        <tspan>- </tspan>
-                        <tspan>1</tspan>
-                        <tspan>; </tspan>
-                        <tspan>inIndex</tspan>
-                        <tspan>++</tspan>
-                        <tspan>) </tspan>
-                        <tspan>{'{'}</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>36</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>if </tspan>
-                        <tspan>(</tspan>
-                        <tspan>arr</tspan>
-                        <tspan>[</tspan>
-                        <tspan>inIndex</tspan>
-                        <tspan>] </tspan>
-                        <tspan>{'>'} </tspan>
-                        <tspan>arr</tspan>
-                        <tspan>[</tspan>
-                        <tspan>inIndex</tspan>
-                        <tspan>+ </tspan>
-                        <tspan>1</tspan>
-                        <tspan>] </tspan>
-                        <tspan>) </tspan>
-                        <tspan>swap</tspan>
-                        <tspan>(</tspan>
-                        <tspan>arr</tspan>
-                        <tspan>, </tspan>
-                        <tspan>inIndex</tspan>
-                        <tspan>, </tspan>
-                        <tspan>inIndex </tspan>
-                        <tspan>+ </tspan>
-                        <tspan>1</tspan>
-                        <tspan>);</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>37</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>{'}'}</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>38</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>{'}'}</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>39</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>{'}'}</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>40</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                    </text><br />
-                    <text>
-                        <tspan>41</tspan>
-                        <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                        <tspan>app</tspan>
-                        <tspan>.</tspan>
-                        <tspan>listen</tspan>
-                        <tspan>(</tspan>
-                        <tspan>port</tspan>
-                        <tspan>, </tspan>
-                        <tspan>listening</tspan>
-                        <tspan>(</tspan>
-                        <tspan>port</tspan>
-                        <tspan>)</tspan>
-                        <tspan>)</tspan>
-                        <tspan>;</tspan>
-                    </text><br />
-                </div>
-            </div>
-
-            <h6 class="bottombar">Pick Colors on the Side</h6>
-        </div>
+        </table>
+        
     )
 }
 

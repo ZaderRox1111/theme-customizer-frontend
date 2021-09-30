@@ -34,7 +34,6 @@ text {
     height: 870px;
     background-color: #181f25;
     box-shadow: black 0 0 50px 0px;
-    color: white;
     border-radius: 25px;
 }
 
@@ -49,4 +48,13 @@ text {
     width: 100%;
     height: 96%;
     line-height: 18px;
+}
+
+.colors {
+    width: 9500px;
+}
+
+.themebox {
+    position: relative;
+    right: 0px;
 }

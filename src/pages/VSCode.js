@@ -23,17 +23,7 @@ function VSCode() {
 
             <br />
 
-            <table class="themevs">
-                <tr>
-                    <td class="colors">
-                        <h4>test</h4>
-                    </td>
-
-                    <td class="themebox">
-                        <VSCodeBox />
-                    </td>
-                </tr>
-            </table>
+            <VSCodeBox />
 
             <footer class="footerthemes">
                 <IconContext.Provider value={{ style: {
