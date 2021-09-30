@@ -19,13 +19,13 @@ function VSCodeBox() {
     const [c2, setC2] = useState('#44929e');
     const [c3, setC3] = useState('#c15f6f');
     const [c4, setC4] = useState('#64b2be');
-    const [c5, setC5] = useState('#ffffff');
+    const [c5, setC5] = useState('#84b5ca');
     const [c6, setC6] = useState('#a7a8af');
     const [c7, setC7] = useState('#54ac86');
     const [c8, setC8] = useState('#24727e');
     const [c9, setC9] = useState('#ffffff');
     const [c10, setC10] = useState('#ffffff');
-    const [c11, setC11] = useState('#ffffff');
+    const [c11, setC11] = useState('#f9a64e');
     const [c12, setC12] = useState('#84b5ca');
 
     const increase = () => {
@@ -40,7 +40,7 @@ function VSCodeBox() {
                     <Button
                         onClick={increase}
                     >
-                        Balls
+                        Color
                     </Button>
 
                 </td>
@@ -71,9 +71,9 @@ function VSCodeBox() {
                                 <tspan style={{color:c6}}>=</tspan>
                                 <tspan>&nbsp;</tspan>
                                 <tspan style={{color:c7}}>require</tspan>
-                                <tspan style={{color:c6}}>(</tspan>
+                                <tspan style={{color:c5}}>(</tspan>
                                 <tspan style={{color:c12}}>'express'</tspan>
-                                <tspan style={{color:c6}}>)</tspan>
+                                <tspan style={{color:c5}}>)</tspan>
                                 <tspan style={{color:c6}}>;</tspan>
                             </text><br/>
                             <text>
@@ -86,8 +86,8 @@ function VSCodeBox() {
                                 <tspan>&nbsp;</tspan>
                                 <tspan style={{color:c6}}>=</tspan>
                                 <tspan>&nbsp;</tspan>
-                                <tspan>express</tspan>
-                                <tspan>()</tspan>
+                                <tspan style={{color:c3}}>express</tspan>
+                                <tspan style={{color:c5}}>()</tspan>
                                 <tspan style={{color:c6}}>;</tspan>
                             </text><br />
                             <text>
@@ -96,11 +96,11 @@ function VSCodeBox() {
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan style={{color:c2}}>const</tspan>
                                 <tspan>&nbsp;</tspan>
-                                <tspan>port</tspan>
+                                <tspan style={{color:c3}}>port</tspan>
                                 <tspan>&nbsp;</tspan>
                                 <tspan style={{color:c6}}>=</tspan>
                                 <tspan>&nbsp;</tspan>
-                                <tspan>8080</tspan>
+                                <tspan style={{color:c11}}>8080</tspan>
                                 <tspan style={{color:c6}}>;</tspan>
                             </text><br />
                             <text>
@@ -114,15 +114,15 @@ function VSCodeBox() {
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan style={{color:c2}}>const</tspan>
                                 <tspan>&nbsp;</tspan>
-                                <tspan>listening</tspan>
+                                <tspan style={{color:c3}}>listening</tspan>
                                 <tspan>&nbsp;</tspan>
                                 <tspan style={{color:c6}}>=</tspan>
                                 <tspan>&nbsp;</tspan>
-                                <tspan>(</tspan>
+                                <tspan style={{color:c5}}>(</tspan>
                                 <tspan>portNum</tspan>
-                                <tspan>)</tspan>
+                                <tspan style={{color:c5}}>)</tspan>
                                 <tspan>&nbsp;</tspan>
-                                <tspan style={{color:c6}}>={'>'}</tspan>
+                                <tspan style={{color:c11}}>={'>'}</tspan>
                                 <tspan>&nbsp;</tspan>
                                 <tspan style={{color:c6}}>{'{'}</tspan>
                             </text><br />
@@ -133,8 +133,8 @@ function VSCodeBox() {
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan>console</tspan>
                                 <tspan style={{color:c6}}>.</tspan>
-                                <tspan>log</tspan>
-                                <tspan>(</tspan>
+                                <tspan style={{color:c3}}>log</tspan>
+                                <tspan style={{color:c5}}>(</tspan>
                                 <tspan style={{color:c6}}>`</tspan>
                                 <tspan>Currently listening on port: </tspan>
                                 <tspan style={{color:c6}}>{'${'}</tspan>
@@ -145,7 +145,7 @@ function VSCodeBox() {
                                 <tspan><u>portNum</u></tspan>
                                 <tspan style={{color:c6}}><u>{'}'}</u></tspan>
                                 <tspan style={{color:c6}}>`</tspan>
-                                <tspan>)</tspan>
+                                <tspan style={{color:c5}}>)</tspan>
                                 <tspan style={{color:c6}}>;</tspan>
                             </text><br />
                             <text>
@@ -164,7 +164,7 @@ function VSCodeBox() {
                                 <tspan>&nbsp;</tspan>
                                 <tspan style={{color:c6}}>=</tspan>
                                 <tspan>&nbsp;</tspan>
-                                <tspan>0</tspan>
+                                <tspan style={{color:c11}}>0</tspan>
                                 <tspan style={{color:c6}}>;</tspan>
                             </text><br />
                             <text>
@@ -187,7 +187,7 @@ function VSCodeBox() {
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan style={{color:c2}}>const</tspan>
                                 <tspan>&nbsp;</tspan>
-                                <tspan>localObject</tspan>
+                                <tspan style={{color:c3}}>localObject</tspan>
                                 <tspan>&nbsp;</tspan>
                                 <tspan style={{color:c6}}>=</tspan>
                                 <tspan>&nbsp;</tspan>
@@ -210,7 +210,7 @@ function VSCodeBox() {
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan>number</tspan>
                                 <tspan style={{color:c6}}>: </tspan>
-                                <tspan>17</tspan>
+                                <tspan style={{color:c11}}>17</tspan>
                             </text><br />
                             <text>
                                 <tspan style={{color:c8}}>13</tspan>
@@ -237,8 +237,8 @@ function VSCodeBox() {
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan>number</tspan>
                                 <tspan style={{color:c6}}>: </tspan>
-                                <tspan>-</tspan>
-                                <tspan>35.8</tspan>
+                                <tspan style={{color:c11}}>-</tspan>
+                                <tspan style={{color:c11}}>35.8</tspan>
                             </text><br />
                             <text>
                                 <tspan style={{color:c8}}>16</tspan>
@@ -262,15 +262,15 @@ function VSCodeBox() {
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan>Object</tspan>
                                 <tspan style={{color:c6}}>.</tspan>
-                                <tspan>values</tspan>
-                                <tspan>(</tspan>
+                                <tspan style={{color:c3}}>values</tspan>
+                                <tspan style={{color:c5}}>(</tspan>
                                 <tspan style={{color:c4}}>localObject</tspan>
-                                <tspan>)</tspan>
+                                <tspan style={{color:c5}}>)</tspan>
                                 <tspan style={{color:c6}}>.</tspan>
-                                <tspan>forEach</tspan>
-                                <tspan>(</tspan>
+                                <tspan style={{color:c3}}>forEach</tspan>
+                                <tspan style={{color:c5}}>(</tspan>
                                 <tspan>value </tspan>
-                                <tspan>{'=>'} </tspan>
+                                <tspan style={{color:c11}}>{'=>'} </tspan>
                                 <tspan style={{color:c6}}>{'{'}</tspan>
                             </text><br />
                             <text>
@@ -283,24 +283,24 @@ function VSCodeBox() {
                                 <tspan style={{color:c4}}>index</tspan>
                                 <tspan>] </tspan>
                                 <tspan style={{color:c6}}>= </tspan>
-                                <tspan>(</tspan>
+                                <tspan style={{color:c5}}>(</tspan>
                                 <tspan style={{color:c4}}>value</tspan>
                                 <tspan>.</tspan>
                                 <tspan style={{color:c4}}>number </tspan>
-                                <tspan>+ </tspan>
-                                <tspan>1.0</tspan>
+                                <tspan style={{color:c11}}>+ </tspan>
+                                <tspan style={{color:c11}}>1.0</tspan>
                                 <tspan>) </tspan>
                                 <tspan>/ </tspan>
-                                <tspan>(</tspan>
+                                <tspan style={{color:c5}}>(</tspan>
                                 <tspan>Math</tspan>
                                 <tspan style={{color:c6}}>.</tspan>
-                                <tspan>random</tspan>
+                                <tspan style={{color:c3}}>random</tspan>
                                 <tspan>() </tspan>
-                                <tspan>* </tspan>
+                                <tspan style={{color:c11}}>* </tspan>
                                 <tspan style={{color:c4}}>value</tspan>
                                 <tspan style={{color:c6}}>.</tspan>
                                 <tspan style={{color:c4}}>number</tspan>
-                                <tspan>)</tspan>
+                                <tspan style={{color:c5}}>)</tspan>
                                 <tspan style={{color:c6}}>;</tspan>
                             </text><br />
                             <text>
@@ -309,7 +309,7 @@ function VSCodeBox() {
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan style={{color:c4}}>index</tspan>
-                                <tspan>++</tspan>
+                                <tspan style={{color:c11}}>++</tspan>
                                 <tspan style={{color:c6}}>;</tspan>
                             </text><br />
                             <text>
@@ -317,7 +317,7 @@ function VSCodeBox() {
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan style={{color:c6}}>{'}'}</tspan>
-                                <tspan>)</tspan>
+                                <tspan style={{color:c5}}>)</tspan>
                                 <tspan style={{color:c6}}>;</tspan>
                             </text><br />
                             <text>
@@ -328,12 +328,12 @@ function VSCodeBox() {
                                 <tspan style={{color:c8}}>24</tspan>
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                                <tspan>bubbleSort</tspan>
-                                <tspan>(</tspan>
+                                <tspan style={{color:c3}}>bubbleSort</tspan>
+                                <tspan style={{color:c5}}>(</tspan>
                                 <tspan style={{color:c4}}>answerArr</tspan>
                                 <tspan style={{color:c6}}>, </tspan>
-                                <tspan>2</tspan>
-                                <tspan>)</tspan>
+                                <tspan style={{color:c11}}>2</tspan>
+                                <tspan style={{color:c5}}>)</tspan>
                                 <tspan style={{color:c6}}>;</tspan>
                             </text><br />
                             <text>
@@ -350,19 +350,19 @@ function VSCodeBox() {
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan style={{color:c2}}>const</tspan>
                                 <tspan>&nbsp;</tspan>
-                                <tspan>swap</tspan>
+                                <tspan style={{color:c3}}>swap</tspan>
                                 <tspan>&nbsp;</tspan>
                                 <tspan style={{color:c6}}>=</tspan>
                                 <tspan>&nbsp;</tspan>
-                                <tspan>(</tspan>
+                                <tspan style={{color:c5}}>(</tspan>
                                 <tspan>arr</tspan>
                                 <tspan style={{color:c6}}>, </tspan>
                                 <tspan>firstIndex</tspan>
                                 <tspan style={{color:c6}}>, </tspan>
                                 <tspan>secondIndex</tspan>
-                                <tspan>)</tspan>
+                                <tspan style={{color:c5}}>)</tspan>
                                 <tspan>&nbsp;</tspan>
-                                <tspan>={'>'}</tspan>
+                                <tspan style={{color:c11}}>={'>'}</tspan>
                                 <tspan>&nbsp;</tspan>
                                 <tspan style={{color:c6}}>{'{'}</tspan>
                             </text><br />
@@ -419,14 +419,14 @@ function VSCodeBox() {
                                 <tspan style={{color:c8}}>33</tspan>
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan style={{color:c2}}>const </tspan>
-                                <tspan>bubbleSort </tspan>
+                                <tspan style={{color:c3}}>bubbleSort </tspan>
                                 <tspan style={{color:c6}}>= </tspan>
-                                <tspan>(</tspan>
+                                <tspan style={{color:c5}}>(</tspan>
                                 <tspan>arr</tspan>
                                 <tspan style={{color:c6}}>, </tspan>
                                 <tspan>size</tspan>
                                 <tspan>) </tspan>
-                                <tspan>={'>'} </tspan>
+                                <tspan style={{color:c11}}>={'>'} </tspan>
                                 <tspan style={{color:c6}}>{'{'}</tspan>
                             </text><br />
                             <text>
@@ -434,20 +434,20 @@ function VSCodeBox() {
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan>for </tspan>
-                                <tspan>(</tspan>
+                                <tspan style={{color:c5}}>(</tspan>
                                 <tspan style={{color:c2}}>var </tspan>
                                 <tspan style={{color:c4}}>outIndex </tspan>
                                 <tspan style={{color:c6}}>= </tspan>
-                                <tspan>0</tspan>
+                                <tspan style={{color:c11}}>0</tspan>
                                 <tspan style={{color:c6}}>; </tspan>
                                 <tspan style={{color:c4}}>outIndex </tspan>
-                                <tspan>{'<'} </tspan>
+                                <tspan style={{color:c11}}>{'<'} </tspan>
                                 <tspan style={{color:c4}}>size </tspan>
-                                <tspan>- </tspan>
-                                <tspan>1</tspan>
+                                <tspan style={{color:c11}}>- </tspan>
+                                <tspan style={{color:c11}}>1</tspan>
                                 <tspan style={{color:c6}}>; </tspan>
                                 <tspan style={{color:c4}}>outIndex</tspan>
-                                <tspan>++</tspan>
+                                <tspan style={{color:c11}}>++</tspan>
                                 <tspan>) </tspan>
                                 <tspan style={{color:c6}}>{'{'}</tspan>
                             </text><br />
@@ -457,22 +457,22 @@ function VSCodeBox() {
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan>for </tspan>
-                                <tspan>(</tspan>
+                                <tspan style={{color:c5}}>(</tspan>
                                 <tspan style={{color:c2}}>var </tspan>
                                 <tspan style={{color:c4}}>inIndex </tspan>
                                 <tspan style={{color:c6}}>= </tspan>
-                                <tspan>0</tspan>
+                                <tspan style={{color:c11}}>0</tspan>
                                 <tspan style={{color:c6}}>; </tspan>
                                 <tspan style={{color:c4}}>inIndex </tspan>
-                                <tspan>{'<'} </tspan>
+                                <tspan style={{color:c11}}>{'<'} </tspan>
                                 <tspan style={{color:c4}}>size </tspan>
-                                <tspan>- </tspan>
+                                <tspan style={{color:c11}}>- </tspan>
                                 <tspan style={{color:c4}}>outIndex </tspan>
-                                <tspan>- </tspan>
-                                <tspan>1</tspan>
+                                <tspan style={{color:c11}}>- </tspan>
+                                <tspan style={{color:c11}}>1</tspan>
                                 <tspan style={{color:c6}}>; </tspan>
                                 <tspan style={{color:c4}}>inIndex</tspan>
-                                <tspan>++</tspan>
+                                <tspan style={{color:c11}}>++</tspan>
                                 <tspan>) </tspan>
                                 <tspan style={{color:c6}}>{'{'}</tspan>
                             </text><br />
@@ -483,29 +483,29 @@ function VSCodeBox() {
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan>if </tspan>
-                                <tspan>(</tspan>
+                                <tspan style={{color:c5}}>(</tspan>
                                 <tspan style={{color:c4}}>arr</tspan>
                                 <tspan>[</tspan>
                                 <tspan style={{color:c4}}>inIndex</tspan>
                                 <tspan>] </tspan>
-                                <tspan>{'>'} </tspan>
+                                <tspan style={{color:c11}}>{'>'} </tspan>
                                 <tspan style={{color:c4}}>arr</tspan>
                                 <tspan>[</tspan>
                                 <tspan style={{color:c4}}>inIndex</tspan>
-                                <tspan>+ </tspan>
-                                <tspan>1</tspan>
+                                <tspan style={{color:c11}}>+ </tspan>
+                                <tspan style={{color:c11}}>1</tspan>
                                 <tspan>] </tspan>
                                 <tspan>) </tspan>
-                                <tspan>swap</tspan>
-                                <tspan>(</tspan>
+                                <tspan style={{color:c3}}>swap</tspan>
+                                <tspan style={{color:c5}}>(</tspan>
                                 <tspan style={{color:c4}}>arr</tspan>
                                 <tspan style={{color:c6}}>, </tspan>
                                 <tspan style={{color:c4}}>inIndex</tspan>
                                 <tspan style={{color:c6}}>, </tspan>
                                 <tspan style={{color:c4}}>inIndex </tspan>
-                                <tspan>+ </tspan>
-                                <tspan>1</tspan>
-                                <tspan>)</tspan>
+                                <tspan style={{color:c11}}>+ </tspan>
+                                <tspan style={{color:c11}}>1</tspan>
+                                <tspan style={{color:c5}}>)</tspan>
                                 <tspan style={{color:c6}}>;</tspan>
                             </text><br />
                             <text>
@@ -535,15 +535,15 @@ function VSCodeBox() {
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan style={{color:c4}}>app</tspan>
                                 <tspan style={{color:c6}}>.</tspan>
-                                <tspan>listen</tspan>
-                                <tspan>(</tspan>
+                                <tspan style={{color:c3}}>listen</tspan>
+                                <tspan style={{color:c5}}>(</tspan>
                                 <tspan style={{color:c4}}>port</tspan>
                                 <tspan style={{color:c6}}>, </tspan>
-                                <tspan>listening</tspan>
-                                <tspan>(</tspan>
+                                <tspan style={{color:c3}}>listening</tspan>
+                                <tspan style={{color:c5}}>(</tspan>
                                 <tspan style={{color:c4}}>port</tspan>
-                                <tspan>)</tspan>
-                                <tspan>)</tspan>
+                                <tspan style={{color:c5}}>)</tspan>
+                                <tspan style={{color:c5}}>)</tspan>
                                 <tspan style={{color:c6}}>;</tspan>
                             </text><br />
                         </div>
