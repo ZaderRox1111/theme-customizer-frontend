@@ -2,6 +2,7 @@ import '../css/VSCodeBox.css';
 import { makeStyles } from '@material-ui/core';
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
+import { HexColorPicker } from 'react-colorful';
 
 const useStyles = makeStyles(theme => ({
     maintext: {
@@ -28,8 +29,17 @@ function VSCodeBox() {
     const [c11, setC11] = useState('#f9a64e');
     const [c12, setC12] = useState('#84b5ca');
 
-    const increase = () => {
-        setC6('green');
+    const [c1open, setC1Open] = useState(false);
+    const [c2open, setC2Open] = useState(false);
+
+    const onClick = (colorOpen) => {
+        
+    }
+
+    const generateRandomColor = () => {
+        let color = Math.floor(Math.random() * 16777215).toString(16);
+
+        return `#${color}`;
     }
 
     return (
@@ -38,10 +48,14 @@ function VSCodeBox() {
                 <td class="colors">
                     
                     <Button
-                        onClick={increase}
+                        onClick={onClick(c1open, setC1Open)}
                     >
                         Color
                     </Button>
+
+                    {c1open &&
+                        <HexColorPicker color={c1} onChange={setC1} />
+                    }
 
                 </td>
 
@@ -55,7 +69,7 @@ function VSCodeBox() {
 
                         </div>
 
-                        <div class="topbar">    
+                        <div class="topbar" style={{backgroundColor:c8}}>    
                             <h5>Top Bar</h5>
                         </div>
 
@@ -380,7 +394,7 @@ function VSCodeBox() {
                                 <tspan style={{color:c6}}>;</tspan>
                             </text><br />
                             <text>
-                                <tspan style={{color:c8}}>29</tspan>
+                                <tspan style={{color:c3}}>29</tspan>
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan style={{color:c4}}>arr</tspan>
