@@ -32,10 +32,6 @@ function VSCodeBox() {
     const [c1open, setC1Open] = useState(false);
     const [c2open, setC2Open] = useState(false);
 
-    const onClick = (colorOpen) => {
-        
-    }
-
     const generateRandomColor = () => {
         let color = Math.floor(Math.random() * 16777215).toString(16);
 
@@ -48,13 +44,21 @@ function VSCodeBox() {
                 <td class="colors">
                     
                     <Button
-                        onClick={onClick(c1open, setC1Open)}
+                        onClick={() => {setC1Open(!c1open)}}
+                    >
+                        Color
+                    </Button>
+                    <Button
+                        onClick={() => {setC2Open(!c2open)}}
                     >
                         Color
                     </Button>
 
                     {c1open &&
                         <HexColorPicker color={c1} onChange={setC1} />
+                    }
+                    {c2open &&
+                        <HexColorPicker color={c2} onChange={setC2} />
                     }
 
                 </td>
