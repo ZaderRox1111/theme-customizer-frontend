@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core';
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { HexColorPicker } from 'react-colorful';
+import ColorButton from './ColorButton';
 
 const useStyles = makeStyles(theme => ({
     maintext: {
@@ -31,6 +32,7 @@ function VSCodeBox() {
 
     const [c1open, setC1Open] = useState(false);
     const [c2open, setC2Open] = useState(false);
+    const [c3open, setC3Open] = useState(false);
 
     const generateRandomColor = () => {
         let color = Math.floor(Math.random() * 16777215).toString(16);
@@ -48,17 +50,17 @@ function VSCodeBox() {
                     >
                         Color
                     </Button>
-                    <Button
-                        onClick={() => {setC2Open(!c2open)}}
-                    >
-                        Color
-                    </Button>
+                    <ColorButton
+                        setOpen={setC3Open}
+                        open={c3open}
+                        color={c3}
+                    />
+
+                </td>
+                <td>
 
                     {c1open &&
                         <HexColorPicker color={c1} onChange={setC1} />
-                    }
-                    {c2open &&
-                        <HexColorPicker color={c2} onChange={setC2} />
                     }
 
                 </td>
