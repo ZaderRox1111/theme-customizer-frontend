@@ -44,24 +44,22 @@ function VSCodeBox() {
         <table>
             <tr>
                 <td class="colors">
+
+                    <ColorButton
+                        setOpen={setC1Open}
+                        open={c1open}
+                        setColor={setC1}
+                        color={c1}
+                        theme="Background"
+                    />
                     
-                    <Button
-                        onClick={() => {setC1Open(!c1open)}}
-                    >
-                        Color
-                    </Button>
                     <ColorButton
                         setOpen={setC3Open}
                         open={c3open}
+                        setColor={setC3}
                         color={c3}
+                        theme="Functions and Constants"
                     />
-
-                </td>
-                <td>
-
-                    {c1open &&
-                        <HexColorPicker color={c1} onChange={setC1} />
-                    }
 
                 </td>
 
