@@ -7,39 +7,40 @@ import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
     colorbutton: {
-        display: "inline-block",
+        display: "inline",
         position: "relative",
         width: "25px",
         height: "40px",
-        top: "-16.75px",
         border: "#d6d6d6 solid 1px",
         borderRadius: "5px 0 0 5px",
     },
 
     full: {
-        padding: "15px",
-        paddingLeft: "10px",
-        width: "350px"
+        display: "flex",
+        position: "relative",
+        width: "350px",
+        height: "40px",
+        marginTop: "15px",
+        marginLeft: "10px",
+        alignItems: "center",
+        lineHeight: "40px",
     },
 
     colortext: {
-        display: "inline-block",
+        display: "inline",
         backgroundColor: "#181f25",
         color: "#d6d6d6",
         position: "relative",
-        top: "-24px",
         height: "40px",
-        padding: "10px 10px 0 10px",
         border: "solid #d6d6d6 1px",
         borderRadius: "0 5px 5px 0",
-        fontSize: "18px",
+        paddingLeft: "10px",
+        paddingRight: "10px",
         fontStyle: "italic",
     },
 
     colorpicker: {
-        position: "relative",
-        top: "-50px",
-        paddingLeft: "10px",
+        marginLeft: "10px"
     }
 }));
 
@@ -51,6 +52,10 @@ const ColorButton = ({
     theme
 }) => {
     const { colorbutton, colortext, colorpicker, full } = useStyles();
+
+    const onChange = () => {
+
+    }
 
     return (
         <div>
@@ -65,7 +70,10 @@ const ColorButton = ({
             </div>
 
             {open &&
-                <HexColorPicker color={color} onChange={setColor} className={colorpicker} />
+                <div>
+                    <HexColorPicker color={color} onChange={setColor} className={colorpicker} />
+                    
+                </div>
             }
         </div>
     )

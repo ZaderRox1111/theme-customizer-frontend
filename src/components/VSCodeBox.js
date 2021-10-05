@@ -33,6 +33,15 @@ function VSCodeBox() {
     const [c1open, setC1Open] = useState(false);
     const [c2open, setC2Open] = useState(false);
     const [c3open, setC3Open] = useState(false);
+    const [c4open, setC4Open] = useState(false);
+    const [c5open, setC5Open] = useState(false);
+    const [c6open, setC6Open] = useState(false);
+    const [c7open, setC7Open] = useState(false);
+    const [c8open, setC8Open] = useState(false);
+    const [c9open, setC9Open] = useState(false);
+    const [c10open, setC10Open] = useState(false);
+    const [c11open, setC11Open] = useState(false);
+    const [c12open, setC12Open] = useState(false);
 
     const generateRandomColor = () => {
         let color = Math.floor(Math.random() * 16777215).toString(16);
@@ -52,6 +61,14 @@ function VSCodeBox() {
                         color={c1}
                         theme="Background"
                     />
+
+                    <ColorButton
+                        setOpen={setC2Open}
+                        open={c2open}
+                        setColor={setC2}
+                        color={c2}
+                        theme="Storage of Variables"
+                    />
                     
                     <ColorButton
                         setOpen={setC3Open}
@@ -59,6 +76,78 @@ function VSCodeBox() {
                         setColor={setC3}
                         color={c3}
                         theme="Functions and Constants"
+                    />
+
+                    <ColorButton
+                        setOpen={setC4Open}
+                        open={c4open}
+                        setColor={setC4}
+                        color={c4}
+                        theme="Variables"
+                    />
+
+                    <ColorButton
+                        setOpen={setC5Open}
+                        open={c5open}
+                        setColor={setC5}
+                        color={c5}
+                        theme="Parentheses and Brackets"
+                    />
+
+                    <ColorButton
+                        setOpen={setC6Open}
+                        open={c6open}
+                        setColor={setC6}
+                        color={c6}
+                        theme="Punctuation and Loops"
+                    />
+
+                    <ColorButton
+                        setOpen={setC11Open}
+                        open={c11open}
+                        setColor={setC11}
+                        color={c11}
+                        theme="Numbers and Expressions"
+                    />
+
+                    <ColorButton
+                        setOpen={setC12Open}
+                        open={c12open}
+                        setColor={setC12}
+                        color={c12}
+                        theme="Strings"
+                    />
+
+                    <ColorButton
+                        setOpen={setC7Open}
+                        open={c7open}
+                        setColor={setC7}
+                        color={c7}
+                        theme="Parameters and Modules"
+                    />
+
+                    <ColorButton
+                        setOpen={setC8Open}
+                        open={c8open}
+                        setColor={setC8}
+                        color={c8}
+                        theme="Borders and Line Numbers"
+                    />
+
+                    <ColorButton
+                        setOpen={setC9Open}
+                        open={c9open}
+                        setColor={setC9}
+                        color={c9}
+                        theme="Status Bar Background"
+                    />
+
+                    <ColorButton
+                        setOpen={setC10Open}
+                        open={c10open}
+                        setColor={setC10}
+                        color={c10}
+                        theme="Status Bar Foreground"
                     />
 
                 </td>
@@ -84,7 +173,7 @@ function VSCodeBox() {
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan style={{color:c2}}>const</tspan>
                                 <tspan>&nbsp;</tspan>
-                                <tspan style={{color:c3}}>express</tspan>
+                                <tspan style={{color:c3,fontStyle:"italic"}}>express</tspan>
                                 <tspan>&nbsp;</tspan>
                                 <tspan style={{color:c6}}>=</tspan>
                                 <tspan>&nbsp;</tspan>
@@ -104,7 +193,7 @@ function VSCodeBox() {
                                 <tspan>&nbsp;</tspan>
                                 <tspan style={{color:c6}}>=</tspan>
                                 <tspan>&nbsp;</tspan>
-                                <tspan style={{color:c3}}>express</tspan>
+                                <tspan style={{color:c3,fontStyle:"italic"}}>express</tspan>
                                 <tspan style={{color:c5}}>()</tspan>
                                 <tspan style={{color:c6}}>;</tspan>
                             </text><br />
@@ -114,7 +203,7 @@ function VSCodeBox() {
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan style={{color:c2}}>const</tspan>
                                 <tspan>&nbsp;</tspan>
-                                <tspan style={{color:c3}}>port</tspan>
+                                <tspan style={{color:c3,fontStyle:"italic"}}>port</tspan>
                                 <tspan>&nbsp;</tspan>
                                 <tspan style={{color:c6}}>=</tspan>
                                 <tspan>&nbsp;</tspan>
@@ -132,7 +221,7 @@ function VSCodeBox() {
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan style={{color:c2}}>const</tspan>
                                 <tspan>&nbsp;</tspan>
-                                <tspan style={{color:c3}}>listening</tspan>
+                                <tspan style={{color:c3,fontStyle:"italic"}}>listening</tspan>
                                 <tspan>&nbsp;</tspan>
                                 <tspan style={{color:c6}}>=</tspan>
                                 <tspan>&nbsp;</tspan>
@@ -151,7 +240,7 @@ function VSCodeBox() {
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan style={{color:c4}}>console</tspan>
                                 <tspan style={{color:c6}}>.</tspan>
-                                <tspan style={{color:c3}}>log</tspan>
+                                <tspan style={{color:c3,fontStyle:"italic"}}>log</tspan>
                                 <tspan style={{color:c5}}>(</tspan>
                                 <tspan style={{color:c6}}>`</tspan>
                                 <tspan style={{color:c12}}>Currently listening on port: </tspan>
@@ -205,7 +294,7 @@ function VSCodeBox() {
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan style={{color:c2}}>const</tspan>
                                 <tspan>&nbsp;</tspan>
-                                <tspan style={{color:c3}}>localObject</tspan>
+                                <tspan style={{color:c3,fontStyle:"italic"}}>localObject</tspan>
                                 <tspan>&nbsp;</tspan>
                                 <tspan style={{color:c6}}>=</tspan>
                                 <tspan>&nbsp;</tspan>
@@ -280,12 +369,12 @@ function VSCodeBox() {
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan style={{color:c7}}>Object</tspan>
                                 <tspan style={{color:c6}}>.</tspan>
-                                <tspan style={{color:c3}}>values</tspan>
+                                <tspan style={{color:c3,fontStyle:"italic"}}>values</tspan>
                                 <tspan style={{color:c5}}>(</tspan>
                                 <tspan style={{color:c4}}>localObject</tspan>
                                 <tspan style={{color:c5}}>)</tspan>
                                 <tspan style={{color:c6}}>.</tspan>
-                                <tspan style={{color:c3}}>forEach</tspan>
+                                <tspan style={{color:c3,fontStyle:"italic"}}>forEach</tspan>
                                 <tspan style={{color:c5}}>(</tspan>
                                 <tspan style={{color:c7}}>value </tspan>
                                 <tspan style={{color:c11}}>{'=>'} </tspan>
@@ -312,7 +401,7 @@ function VSCodeBox() {
                                 <tspan style={{color:c5}}>(</tspan>
                                 <tspan style={{color:c7}}>Math</tspan>
                                 <tspan style={{color:c6}}>.</tspan>
-                                <tspan style={{color:c3}}>random</tspan>
+                                <tspan style={{color:c3,fontStyle:"italic"}}>random</tspan>
                                 <tspan style={{color:c5}}>() </tspan>
                                 <tspan style={{color:c11}}>* </tspan>
                                 <tspan style={{color:c4}}>value</tspan>
@@ -346,7 +435,7 @@ function VSCodeBox() {
                                 <tspan style={{color:c8}}>24</tspan>
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
-                                <tspan style={{color:c3}}>bubbleSort</tspan>
+                                <tspan style={{color:c3,fontStyle:"italic"}}>bubbleSort</tspan>
                                 <tspan style={{color:c5}}>(</tspan>
                                 <tspan style={{color:c4}}>answerArr</tspan>
                                 <tspan style={{color:c6}}>, </tspan>
@@ -368,7 +457,7 @@ function VSCodeBox() {
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan style={{color:c2}}>const</tspan>
                                 <tspan>&nbsp;</tspan>
-                                <tspan style={{color:c3}}>swap</tspan>
+                                <tspan style={{color:c3,fontStyle:"italic"}}>swap</tspan>
                                 <tspan>&nbsp;</tspan>
                                 <tspan style={{color:c6}}>=</tspan>
                                 <tspan>&nbsp;</tspan>
@@ -437,7 +526,7 @@ function VSCodeBox() {
                                 <tspan style={{color:c8}}>33</tspan>
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan style={{color:c2}}>const </tspan>
-                                <tspan style={{color:c3}}>bubbleSort </tspan>
+                                <tspan style={{color:c3,fontStyle:"italic"}}>bubbleSort </tspan>
                                 <tspan style={{color:c6}}>= </tspan>
                                 <tspan style={{color:c5}}>(</tspan>
                                 <tspan style={{color:c7}}>arr</tspan>
@@ -514,7 +603,7 @@ function VSCodeBox() {
                                 <tspan style={{color:c11}}>1</tspan>
                                 <tspan style={{color:c5}}>] </tspan>
                                 <tspan style={{color:c5}}>) </tspan>
-                                <tspan style={{color:c3}}>swap</tspan>
+                                <tspan style={{color:c3,fontStyle:"italic"}}>swap</tspan>
                                 <tspan style={{color:c5}}>(</tspan>
                                 <tspan style={{color:c4}}>arr</tspan>
                                 <tspan style={{color:c6}}>, </tspan>
@@ -553,11 +642,11 @@ function VSCodeBox() {
                                 <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                 <tspan style={{color:c4}}>app</tspan>
                                 <tspan style={{color:c6}}>.</tspan>
-                                <tspan style={{color:c3}}>listen</tspan>
+                                <tspan style={{color:c3,fontStyle:"italic"}}>listen</tspan>
                                 <tspan style={{color:c5}}>(</tspan>
                                 <tspan style={{color:c4}}>port</tspan>
                                 <tspan style={{color:c6}}>, </tspan>
-                                <tspan style={{color:c3}}>listening</tspan>
+                                <tspan style={{color:c3,fontStyle:"italic"}}>listening</tspan>
                                 <tspan style={{color:c5}}>(</tspan>
                                 <tspan style={{color:c4}}>port</tspan>
                                 <tspan style={{color:c5}}>)</tspan>
