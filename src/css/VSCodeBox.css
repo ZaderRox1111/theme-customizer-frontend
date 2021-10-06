@@ -15,10 +15,6 @@ text {
     padding-left: 10px;
 }
 
-.bottombar {
-    top: -7.3%;
-}
-
 .viewbox {
     position: relative;
     top: -3.5%;
@@ -33,6 +29,8 @@ text {
     height: 885px;
     box-shadow: black 0 0 50px 0px;
     border-radius: 25px;
+    background-color: #181f25;
+    color: #9b9b9b;
 }
 
 .topbar {

@@ -2,6 +2,38 @@ body {
     background-color: #202A33;
 }
 
+.head {
+    background-color: #181f25;
+}
+
+.headcreate {
+    position: relative;
+    text-align: center;
+    top: 35px;
+    padding: 10px;
+    font-size: 50px;
+    color: #D6D6D6;
+}
+
+.headplug {
+    position: relative;
+    text-align: center;
+    font-style: italic;
+    padding: 10px;
+    background-color: #181f25;
+    font-size: 16px;
+    color: #5b7283;
+}
+
+.plug {
+    color: #D6D6D6;
+    text-decoration: none;
+}
+
+.plug:hover {
+    color: #9b9b9b;
+}
+
 .footerthemes {
     z-index: 10;
     position: relative;

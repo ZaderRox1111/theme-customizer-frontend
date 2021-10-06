@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
         width: "350px",
         height: "40px",
         marginTop: "15px",
-        marginLeft: "10px",
+        marginLeft: "15px",
         alignItems: "center",
         lineHeight: "40px",
     },
@@ -40,7 +40,7 @@ const useStyles = makeStyles(theme => ({
     },
 
     colorpicker: {
-        marginLeft: "10px"
+        marginLeft: "15px"
     },
 
     pickerdiv: {
@@ -49,7 +49,7 @@ const useStyles = makeStyles(theme => ({
     },
 
     inputvalid: {
-        marginLeft: "10px",
+        marginLeft: "15px",
     }
 }));
 
@@ -106,7 +106,7 @@ const ColorButton = ({
                 <Button
                     onClick={() => {setOpen(!open)}}
                     className={colorbutton}
-                    style={{backgroundColor:color}}
+                    style={{ backgroundColor: color }}
                 />
 
                 <h4 className={colortext}>{theme}</h4>

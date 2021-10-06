@@ -23,6 +23,17 @@ function VSCode() {
 
             <br />
 
+            <div class="head">
+                <h2 class="headcreate">
+                    Create Your Own VSCode Theme!
+                </h2>
+                <h4 class="headplug">
+                    Like what you see? This is my theme&nbsp;
+                    <a class="plug" target="_blank" href="https://marketplace.visualstudio.com/items?itemName=ZaderRox1111.stormy-lighthouse-dark" rel="noreferrer">Stormy Lighthouse</a>
+                    &nbsp;on VSCode Marketplace
+                </h4>
+            </div>
+
             <VSCodeBox />
 
             <footer class="footerthemes">
