@@ -1,5 +1,5 @@
 import '../css/ColorButton.css';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { HexColorPicker } from 'react-colorful';
@@ -41,6 +41,15 @@ const useStyles = makeStyles(theme => ({
 
     colorpicker: {
         marginLeft: "10px"
+    },
+
+    pickerdiv: {
+        position: "relative",
+        width: "215px",
+    },
+
+    inputvalid: {
+        marginLeft: "10px",
     }
 }));
 
@@ -51,11 +60,45 @@ const ColorButton = ({
     color,
     theme
 }) => {
-    const { colorbutton, colortext, colorpicker, full } = useStyles();
+    const { colorbutton, colortext, colorpicker, full, pickerdiv, inputvalid } = useStyles();
+
+    const [valid, setValid] = useState(false);
+
+    const isValidHex = value => {
+        return (/^#([0-9A-F]{3}){1,2}$/i.test(value));
+    }
 
     const onChange = () => {
+        let val = document.getElementById("someID").value;
 
+        if (isValidHex(val))
+        {
+            setColor(val);
+            setValid(true);
+        }
+        else {
+            setValid(false);
+        }
     }
+
+    const ref = useRef();
+
+    useEffect(() => {
+        const checkIfClickedOutside = e => {
+        // If the menu is open and the clicked target is not within the menu,
+        // then close the menu
+            if (open && ref.current && !ref.current.contains(e.target)) {
+                setOpen(false)
+            }
+        }
+
+        document.addEventListener("mousedown", checkIfClickedOutside)
+
+        return () => {
+            // Cleanup the event listener
+            document.removeEventListener("mousedown", checkIfClickedOutside)
+        }
+    }, [open, setOpen])
 
     return (
         <div>
@@ -70,9 +113,15 @@ const ColorButton = ({
             </div>
 
             {open &&
-                <div>
+                <div ref={ref} className={pickerdiv}>
                     <HexColorPicker color={color} onChange={setColor} className={colorpicker} />
-                    
+
+                    <div className={inputvalid}>
+                        <input type="text" placeholder={color} id="someID" onChange={onChange} />
+                        {!valid &&
+                            <h4 class="valid">Not a valid hex code</h4>
+                        }
+                    </div>
                 </div>
             }
         </div>

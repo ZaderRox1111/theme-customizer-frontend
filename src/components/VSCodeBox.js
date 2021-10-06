@@ -25,8 +25,8 @@ function VSCodeBox() {
     const [c6, setC6] = useState('#a7a8af');
     const [c7, setC7] = useState('#54ac86');
     const [c8, setC8] = useState('#24727e');
-    const [c9, setC9] = useState('#ffffff');
-    const [c10, setC10] = useState('#ffffff');
+    const [c9, setC9] = useState('#171f26');
+    const [c10, setC10] = useState('#719bad');
     const [c11, setC11] = useState('#f9a64e');
     const [c12, setC12] = useState('#84b5ca');
 
@@ -42,12 +42,6 @@ function VSCodeBox() {
     const [c10open, setC10Open] = useState(false);
     const [c11open, setC11Open] = useState(false);
     const [c12open, setC12Open] = useState(false);
-
-    const generateRandomColor = () => {
-        let color = Math.floor(Math.random() * 16777215).toString(16);
-
-        return `#${color}`;
-    }
 
     return (
         <table>
@@ -153,7 +147,7 @@ function VSCodeBox() {
                 </td>
 
                 <td class="themebox">
-                    <div class="examplebox">
+                    <div class="examplebox" style={{backgroundColor: c9, color: c10}}>
 
                     <h6>Applied Theme</h6>
 
