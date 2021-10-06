@@ -5,8 +5,20 @@ import VSCodeBox from '../components/VSCodeBox';
 import { VscGithub } from 'react-icons/vsc';
 import { BiCoffeeTogo } from 'react-icons/bi';
 import { IconContext } from 'react-icons';
+import { Button } from 'react-bootstrap';
+import { makeStyles } from '@material-ui/core';
 
-function VSCode() {
+const useStyles = makeStyles(theme => ({
+    exportbutton: {
+        display: "inline",
+        fontSize: "40px",
+        width: "200px",
+    }
+}));
+
+const VSCode = () => {
+    const { exportbutton } = useStyles();
+
     return (
         <body>
             <div class="navbar">
@@ -35,6 +47,15 @@ function VSCode() {
             </div>
 
             <VSCodeBox />
+
+            <div class="export">
+                <p class="exportp">Ready to export it?</p>
+                <Button 
+                    className={exportbutton}
+                >
+                Export
+                </Button>
+            </div>
 
             <footer class="footerthemes">
                 <IconContext.Provider value={{ style: {

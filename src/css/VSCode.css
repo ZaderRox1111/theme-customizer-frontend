@@ -93,6 +93,18 @@ body {
     width: 100%;
 }
 
+.export {
+    background-color: #181f25;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.exportp {
+    display: inline;
+    color: #5b7283;
+    font-size: large;
+}
+
 /* scrollbar */
 /* width */
 ::-webkit-scrollbar {
