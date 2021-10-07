@@ -7,6 +7,7 @@ import { BiCoffeeTogo } from 'react-icons/bi';
 import { IconContext } from 'react-icons';
 import { Button } from 'react-bootstrap';
 import { makeStyles } from '@material-ui/core';
+import Instructions from '../components/Instructions'
 
 const useStyles = makeStyles(theme => ({
     exportbutton: {
@@ -47,7 +48,9 @@ const VSCode = () => {
                 </h4>
             </div>
 
-            <VSCodeBox />
+            <div class="box">
+                <VSCodeBox />
+            </div>
 
             <div class="export">
                 <h2 class="exporth">Ready to export it?</h2>
@@ -58,9 +61,7 @@ const VSCode = () => {
                 </Button>
             </div>
 
-            <div class="instructions">
-                <h2 class="exporth" style={{textAlign:'center', padding: '50px'}}>Instructions</h2>
-            </div>
+            <Instructions />
 
             <footer class="footerthemes">
                 <IconContext.Provider value={{ style: {
