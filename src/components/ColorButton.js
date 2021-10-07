@@ -62,7 +62,7 @@ const ColorButton = ({
 }) => {
     const { colorbutton, colortext, colorpicker, full, pickerdiv, inputvalid } = useStyles();
 
-    const [valid, setValid] = useState(false);
+    const [valid, setValid] = useState(true);
 
     const isValidHex = value => {
         return (/^#([0-9A-F]{3}){1,2}$/i.test(value));

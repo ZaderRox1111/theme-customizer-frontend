@@ -57,11 +57,11 @@ function Home() {
                     color: '#d6d6d6'
                 }}}>
                     <p>
-                        <a href="https://github.com/ZaderRox1111">
+                        <a target="_blank" rel="noreferrer" href="https://github.com/ZaderRox1111">
                             <VscGithub />  
                         </a>
                         &nbsp; Check out my other projects! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="https://paypal.me/zachariahderrick">
+                        <a target="_blank" rel="noreferrer" href="https://paypal.me/zachariahderrick">
                             <BiCoffeeTogo />
                         </a>
                         &nbsp; Buy me a coffee!

@@ -13,7 +13,8 @@ const useStyles = makeStyles(theme => ({
         display: "inline",
         fontSize: "40px",
         width: "200px",
-    }
+        height: "75px"
+    },
 }));
 
 const VSCode = () => {
@@ -40,7 +41,7 @@ const VSCode = () => {
                     Create Your Own VSCode Theme!
                 </h2>
                 <h4 class="headplug">
-                    Like what you see? This is my theme&nbsp;
+                    Like what you see? Download my theme&nbsp;
                     <a class="plug" target="_blank" href="https://marketplace.visualstudio.com/items?itemName=ZaderRox1111.stormy-lighthouse-dark" rel="noreferrer">Stormy Lighthouse</a>
                     &nbsp;on VSCode Marketplace
                 </h4>
@@ -49,12 +50,16 @@ const VSCode = () => {
             <VSCodeBox />
 
             <div class="export">
-                <p class="exportp">Ready to export it?</p>
+                <h2 class="exporth">Ready to export it?</h2>
                 <Button 
                     className={exportbutton}
                 >
                 Export
                 </Button>
+            </div>
+
+            <div class="instructions">
+                <h2 class="exporth" style={{textAlign:'center', padding: '50px'}}>Instructions</h2>
             </div>
 
             <footer class="footerthemes">
@@ -65,11 +70,11 @@ const VSCode = () => {
                     color: '#d6d6d6'
                 }}}>
                     <p class="pthemes">
-                        <a href="https://github.com/ZaderRox1111">
+                        <a target="_blank" rel="noreferrer" href="https://github.com/ZaderRox1111">
                             <VscGithub />  
                         </a>
                         &nbsp; Check out my other projects! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="https://paypal.me/zachariahderrick">
+                        <a target="_blank" rel="noreferrer" href="https://paypal.me/zachariahderrick">
                             <BiCoffeeTogo />
                         </a>
                         &nbsp; Buy me a coffee!
