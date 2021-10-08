@@ -35,6 +35,7 @@ function VSCodeBox() {
     const [c10, setC10] = useState('#719bad');
     const [c11, setC11] = useState('#f9a64e');
     const [c12, setC12] = useState('#84b5ca');
+    const [c13, setC13] = useState('#6d6f7c');
 
     const [c1open, setC1Open] = useState(false);
     const [c2open, setC2Open] = useState(false);
@@ -48,6 +49,7 @@ function VSCodeBox() {
     const [c10open, setC10Open] = useState(false);
     const [c11open, setC11Open] = useState(false);
     const [c12open, setC12Open] = useState(false);
+    const [c13open, setC13Open] = useState(false);
 
     return (
         <table>
@@ -148,6 +150,14 @@ function VSCodeBox() {
                         setColor={setC10}
                         color={c10}
                         theme="Status Bar Foreground"
+                    />
+                    
+                    <ColorButton
+                        setOpen={setC13Open}
+                        open={c13open}
+                        setColor={setC13}
+                        color={c13}
+                        theme="Comments"
                     />
 
                 </td>
@@ -639,6 +649,11 @@ function VSCodeBox() {
                                 </text><br />
                                 <text>
                                     <tspan style={{color:c8}}>41</tspan>
+                                    <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
+                                    <tspan style={{color:c13}}>// Sets the port the app will listen on</tspan>
+                                </text><br />
+                                <text>
+                                    <tspan style={{color:c8}}>42</tspan>
                                     <tspan>&nbsp;&nbsp;&nbsp;&nbsp;</tspan>
                                     <tspan style={{color:c4}}>app</tspan>
                                     <tspan style={{color:c6}}>.</tspan>
