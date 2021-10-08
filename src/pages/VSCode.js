@@ -7,13 +7,15 @@ import { BiCoffeeTogo } from 'react-icons/bi';
 import { IconContext } from 'react-icons';
 import { Button } from 'react-bootstrap';
 import { makeStyles } from '@material-ui/core';
+import Instructions from '../components/Instructions'
 
 const useStyles = makeStyles(theme => ({
     exportbutton: {
         display: "inline",
         fontSize: "40px",
         width: "200px",
-    }
+        height: "75px"
+    },
 }));
 
 const VSCode = () => {
@@ -40,22 +42,26 @@ const VSCode = () => {
                     Create Your Own VSCode Theme!
                 </h2>
                 <h4 class="headplug">
-                    Like what you see? This is my theme&nbsp;
+                    Like what you see? Download my theme&nbsp;
                     <a class="plug" target="_blank" href="https://marketplace.visualstudio.com/items?itemName=ZaderRox1111.stormy-lighthouse-dark" rel="noreferrer">Stormy Lighthouse</a>
                     &nbsp;on VSCode Marketplace
                 </h4>
             </div>
 
-            <VSCodeBox />
+            <div class="box">
+                <VSCodeBox />
+            </div>
 
             <div class="export">
-                <p class="exportp">Ready to export it?</p>
+                <h2 class="exporth">Ready to export it?</h2>
                 <Button 
                     className={exportbutton}
                 >
                 Export
                 </Button>
             </div>
+
+            <Instructions />
 
             <footer class="footerthemes">
                 <IconContext.Provider value={{ style: {
@@ -65,11 +71,11 @@ const VSCode = () => {
                     color: '#d6d6d6'
                 }}}>
                     <p class="pthemes">
-                        <a href="https://github.com/ZaderRox1111">
+                        <a target="_blank" rel="noreferrer" href="https://github.com/ZaderRox1111">
                             <VscGithub />  
                         </a>
                         &nbsp; Check out my other projects! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="https://paypal.me/zachariahderrick">
+                        <a target="_blank" rel="noreferrer" href="https://paypal.me/zachariahderrick">
                             <BiCoffeeTogo />
                         </a>
                         &nbsp; Buy me a coffee!

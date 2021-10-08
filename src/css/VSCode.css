@@ -20,6 +20,7 @@ body {
     text-align: center;
     font-style: italic;
     padding: 10px;
+    margin-bottom: 0;
     background-color: #181f25;
     font-size: 16px;
     color: #5b7283;
@@ -94,15 +95,23 @@ body {
 }
 
 .export {
+    text-align: center;
     background-color: #181f25;
     padding: 50px;
-    margin-top: 50px;
 }
 
-.exportp {
-    display: inline;
+.exporth {
+    top: 0;
+    padding-bottom: 20px;
     color: #5b7283;
-    font-size: large;
+    font-size: 50px;
+}
+
+.box {
+    background-color: #202A33;
+    padding-top: 25px;
+    padding-bottom: 75px;
+    overflow-x: auto;
 }
 
 /* scrollbar */
