@@ -1,7 +1,8 @@
 import '../css/VSCodeBox.css';
 import { makeStyles } from '@material-ui/core';
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import ColorButton from './ColorButton';
+import PropTypes from 'prop-types';
 import { IconContext } from 'react-icons';
 import { VscFiles, VscSearch, VscSourceControl, VscDebugAlt, VscExtensions } from 'react-icons/vsc';
 
@@ -32,23 +33,24 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-function VSCodeBox() {
+const VSCodeBox = ({
+    setExp,
+    c1, setC1,
+    c2, setC2,
+    c3, setC3,
+    c4, setC4,
+    c5, setC5,
+    c6, setC6,
+    c7, setC7,
+    c8, setC8,
+    c9, setC9,
+    c10, setC10,
+    c11, setC11,
+    c12, setC12,
+    c13, setC13,
+    c14, setC14,
+}) => {
     const { maintext, bottombar, table, topbarbutton } = useStyles();
-
-    const [c1, setC1] = useState('#1c252e');
-    const [c2, setC2] = useState('#44929e');
-    const [c3, setC3] = useState('#c15f6f');
-    const [c4, setC4] = useState('#64b2be');
-    const [c5, setC5] = useState('#84b5ca');
-    const [c6, setC6] = useState('#a7a8af');
-    const [c7, setC7] = useState('#54ac86');
-    const [c8, setC8] = useState('#24727e');
-    const [c9, setC9] = useState('#171f26');
-    const [c10, setC10] = useState('#719bad');
-    const [c11, setC11] = useState('#f9a64e');
-    const [c12, setC12] = useState('#84b5ca');
-    const [c13, setC13] = useState('#6d6f7c');
-    const [c14, setC14] = useState('#C871B7');
 
     const [c1open, setC1Open] = useState(false);
     const [c2open, setC2Open] = useState(false);
@@ -65,6 +67,27 @@ function VSCodeBox() {
     const [c13open, setC13Open] = useState(false);
     const [c14open, setC14Open] = useState(false);
 
+    const buildExport = useCallback(() => {
+        const body = {
+            c1,
+            c2,
+            c3,
+            c4,
+            c5,
+            c6,
+            c7,
+            c8,
+            c9,
+            c10,
+            c11,
+            c12,
+            c13,
+            c14
+        };
+
+        setExp(body);
+    }, [setExp, c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14])
+
     return (
         <table>
             <tr>
@@ -76,6 +99,7 @@ function VSCodeBox() {
                         setColor={setC1}
                         color={c1}
                         theme="Background"
+                        buildExp={buildExport}
                     />
 
                     <ColorButton
@@ -84,6 +108,7 @@ function VSCodeBox() {
                         setColor={setC2}
                         color={c2}
                         theme="Storage of Variables"
+                        buildExp={buildExport}
                     />
                     
                     <ColorButton
@@ -92,6 +117,7 @@ function VSCodeBox() {
                         setColor={setC3}
                         color={c3}
                         theme="Functions and Constants"
+                        buildExp={buildExport}
                     />
 
                     <ColorButton
@@ -100,6 +126,7 @@ function VSCodeBox() {
                         setColor={setC4}
                         color={c4}
                         theme="Variables"
+                        buildExp={buildExport}
                     />
 
                     <ColorButton
@@ -108,6 +135,7 @@ function VSCodeBox() {
                         setColor={setC5}
                         color={c5}
                         theme="Parentheses and Brackets"
+                        buildExp={buildExport}
                     />
 
                     <ColorButton
@@ -116,6 +144,7 @@ function VSCodeBox() {
                         setColor={setC6}
                         color={c6}
                         theme="Punctuation and Loops"
+                        buildExp={buildExport}
                     />
 
                     <ColorButton
@@ -124,6 +153,7 @@ function VSCodeBox() {
                         setColor={setC11}
                         color={c11}
                         theme="Numbers and Expressions"
+                        buildExp={buildExport}
                     />
 
                     <ColorButton
@@ -132,6 +162,7 @@ function VSCodeBox() {
                         setColor={setC12}
                         color={c12}
                         theme="Strings"
+                        buildExp={buildExport}
                     />
 
                     <ColorButton
@@ -140,6 +171,7 @@ function VSCodeBox() {
                         setColor={setC7}
                         color={c7}
                         theme="Parameters and Modules"
+                        buildExp={buildExport}
                     />
 
                     <ColorButton
@@ -148,6 +180,7 @@ function VSCodeBox() {
                         setColor={setC8}
                         color={c8}
                         theme="Borders and Line Numbers"
+                        buildExp={buildExport}
                     />
 
                     <ColorButton
@@ -156,6 +189,7 @@ function VSCodeBox() {
                         setColor={setC9}
                         color={c9}
                         theme="Status Bar Background"
+                        buildExp={buildExport}
                     />
 
                     <ColorButton
@@ -164,6 +198,7 @@ function VSCodeBox() {
                         setColor={setC10}
                         color={c10}
                         theme="Status Bar Foreground"
+                        buildExp={buildExport}
                     />
                     
                     <ColorButton
@@ -172,6 +207,7 @@ function VSCodeBox() {
                         setColor={setC13}
                         color={c13}
                         theme="Comments"
+                        buildExp={buildExport}
                     />
 
                 </td>
@@ -183,6 +219,7 @@ function VSCodeBox() {
                         setColor={setC14}
                         color={c14}
                         theme="Errors/Accents"
+                        buildExp={buildExport}
                     />
                 </td>
 
@@ -735,6 +772,38 @@ function VSCodeBox() {
         </table>
         
     )
+}
+
+VSCodeBox.propTypes = {
+    setExp: PropTypes.func.isRequired,
+    c1: PropTypes.string.isRequired,
+    c2: PropTypes.string.isRequired,
+    c3: PropTypes.string.isRequired,
+    c4: PropTypes.string.isRequired,
+    c5: PropTypes.string.isRequired,
+    c6: PropTypes.string.isRequired,
+    c7: PropTypes.string.isRequired,
+    c8: PropTypes.string.isRequired,
+    c9: PropTypes.string.isRequired,
+    c10: PropTypes.string.isRequired,
+    c11: PropTypes.string.isRequired,
+    c12: PropTypes.string.isRequired,
+    c13: PropTypes.string.isRequired,
+    c14: PropTypes.string.isRequired,
+    setC1: PropTypes.func.isRequired,
+    setC2: PropTypes.func.isRequired,
+    setC3: PropTypes.func.isRequired,
+    setC4: PropTypes.func.isRequired,
+    setC5: PropTypes.func.isRequired,
+    setC6: PropTypes.func.isRequired,
+    setC7: PropTypes.func.isRequired,
+    setC8: PropTypes.func.isRequired,
+    setC9: PropTypes.func.isRequired,
+    setC10: PropTypes.func.isRequired,
+    setC11: PropTypes.func.isRequired,
+    setC12: PropTypes.func.isRequired,
+    setC13: PropTypes.func.isRequired,
+    setC14: PropTypes.func.isRequired,
 }
 
 export default VSCodeBox;

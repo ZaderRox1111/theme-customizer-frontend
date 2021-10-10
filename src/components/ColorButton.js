@@ -58,7 +58,8 @@ const ColorButton = ({
     open,
     setColor,
     color,
-    theme
+    theme,
+    buildExp
 }) => {
     const { colorbutton, colortext, colorpicker, full, pickerdiv, inputvalid } = useStyles();
 
@@ -84,6 +85,7 @@ const ColorButton = ({
     const ref = useRef();
 
     useEffect(() => {
+        buildExp();
         const checkIfClickedOutside = e => {
         // If the menu is open and the clicked target is not within the menu,
         // then close the menu
@@ -98,7 +100,7 @@ const ColorButton = ({
             // Cleanup the event listener
             document.removeEventListener("mousedown", checkIfClickedOutside)
         }
-    }, [open, setOpen])
+    }, [open, setOpen, buildExp])
 
     return (
         <div>
@@ -133,7 +135,8 @@ ColorButton.propTypes = {
     open: PropTypes.bool.isRequired,
     setColor: PropTypes.func.isRequired,
     color: PropTypes.string.isRequired,
-    theme: PropTypes.string.isRequired
+    theme: PropTypes.string.isRequired,
+    buildExp: PropTypes.func.isRequired
 }
 
 export default ColorButton;
