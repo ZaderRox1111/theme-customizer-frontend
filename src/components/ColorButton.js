@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     full: {
         display: "flex",
         position: "relative",
-        width: "350px",
+        width: "300px",
         height: "40px",
         marginTop: "15px",
         marginLeft: "15px",
