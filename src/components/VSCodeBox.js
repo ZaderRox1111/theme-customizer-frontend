@@ -48,6 +48,7 @@ function VSCodeBox() {
     const [c11, setC11] = useState('#f9a64e');
     const [c12, setC12] = useState('#84b5ca');
     const [c13, setC13] = useState('#6d6f7c');
+    const [c14, setC14] = useState('#C871B7');
 
     const [c1open, setC1Open] = useState(false);
     const [c2open, setC2Open] = useState(false);
@@ -62,6 +63,7 @@ function VSCodeBox() {
     const [c11open, setC11Open] = useState(false);
     const [c12open, setC12Open] = useState(false);
     const [c13open, setC13Open] = useState(false);
+    const [c14open, setC14Open] = useState(false);
 
     return (
         <table>
@@ -172,6 +174,16 @@ function VSCodeBox() {
                         theme="Comments"
                     />
 
+                </td>
+
+                <td class="colors">
+                    <ColorButton
+                        setOpen={setC14Open}
+                        open={c14open}
+                        setColor={setC14}
+                        color={c14}
+                        theme="Errors/Accents"
+                    />
                 </td>
 
                 <td class="themebox">
