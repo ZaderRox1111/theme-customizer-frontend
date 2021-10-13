@@ -1,5 +1,19 @@
 .valid {
+    display: inline;
     font-family: 'Oswald', sans-serif;
     color: #d6d6d6;
     margin: 0;
+    margin-left: 10px;
+}
+
+.input {
+    background-color: #00000030;
+    color: #d6d6d6;
+    width: 65px;
+    border: none;
+    border-bottom: solid #d6d6d6 2px;
+}
+
+.input:focus {
+    outline: none;
 }

@@ -70,7 +70,7 @@ const ColorButton = ({
     }
 
     const onChange = () => {
-        let val = document.getElementById("someID").value;
+        let val = document.getElementById("uniqueID").value;
 
         if (isValidHex(val))
         {
@@ -119,7 +119,7 @@ const ColorButton = ({
                     <HexColorPicker color={color} onChange={setColor} className={colorpicker} />
 
                     <div className={inputvalid}>
-                        <input type="text" placeholder={color} id="someID" onChange={onChange} />
+                        <input type="text" class="input" placeholder={color.toUpperCase()} id="uniqueID" onChange={onChange} />
                         {!valid &&
                             <h4 class="valid">Not a valid hex code</h4>
                         }
