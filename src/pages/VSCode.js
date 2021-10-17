@@ -41,10 +41,10 @@ const VSCode = () => {
     const [exp, setExp] = useState({});
 
     const onClick = async () => {
-        let expBody = '';
+        let expBody = {};
 
         for (const [key, value] of Object.entries(exp)) {
-            expBody += `${key}=${value}&`
+            expBody[key] = value;
         }
 
         const template = await exportTemplate( expBody );
