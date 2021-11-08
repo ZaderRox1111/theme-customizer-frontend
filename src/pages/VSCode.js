@@ -47,9 +47,9 @@ const VSCode = () => {
             expBody[key] = value;
         }
 
-        const template = await exportTemplate( expBody );
+        const template = exportTemplate( expBody );
 
-        var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(template.data, null, 4));
+        var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(template);
 
         const doc = document.createElement('a');
 
